@@ -1,0 +1,57 @@
+package TestFramework;
+
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class WrapperMethod {
+	
+	public boolean checkElementExists(WebDriver driver , String id)
+	
+	{
+		
+		return driver.findElement(By.id(id)).isDisplayed();
+	}
+	
+	public void enterDataInTextField(WebDriver driver, String id , String dataToEnter)
+	
+	{
+		driver.findElement(By.id(id)).sendKeys(dataToEnter);
+	}
+	
+	/**
+	 * This method find the element using xpath and click on that
+	 * @param xpathExpression
+	 * @throws IOException
+	 */
+	public static void clickOnElement(WebDriver driver, String expression) throws IOException{
+		
+		//return driver.findElement(By.xpath(ReadConfigureFile.readConfig().getProperty("//*a[@href='http://demoqa.com/registration/']")));	
+		
+		//driver.findElement(By.xpath(expression)).click();
+		driver.findElement(By.cssSelector(expression)).click();
+		
+		
+	}
+	
+	/**
+	 * This method send the values to the text box
+	 * @param path
+	 * @param value
+	 * @throws IOException
+	 */
+
+	public static void inputValue(WebDriver driver, String path,String value) throws IOException{
+		
+		//return driver.findElement(By.xpath(ReadConfigureFile.readConfig().getProperty("//*a[@href='http://demoqa.com/registration/']")));	
+		
+		driver.findElement(By.xpath(path)).sendKeys(value);
+		
+
+}
+		
+	
+
+}

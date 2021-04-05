@@ -1,0 +1,14 @@
+
+public class TriangleArea {
+
+	public static void main(String args[])
+	{
+		int h=10;
+		int b=12;
+		int area;
+		
+		area=1/2*b*h;
+		
+		System.out.println ("Area of Triangle is:" +area);
+	}
+}

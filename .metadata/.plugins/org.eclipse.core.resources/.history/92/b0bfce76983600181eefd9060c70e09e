@@ -1,0 +1,28 @@
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+public class ReverseArrayList5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		LinkedList<String> a1=new LinkedList<String>();
+		//ArrayList a2= new ArrayList<>();
+		
+		a1.add("12");
+		a1.add("34");
+		a1.add("45");
+		
+		/*Collections.reverse(a1);
+		System.out.println("Reverse values are :"+a1);*/
+		
+		ListIterator<String> itr = a1.listIterator();
+		
+		while(itr.hasPrevious())
+		{
+			System.out.println(itr.previous());
+			
+		}
+	}
+
+}

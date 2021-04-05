@@ -1,0 +1,47 @@
+package Day1;
+
+import java.io.*;
+import java.util.concurrent.TimeUnit;
+
+import javax.servlet.FilterRegistration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class LaunchBroweser {
+
+	public static void main(String[] args) {
+		
+		// TODO Auto-generated method stub
+WebDriver driver = new FirefoxDriver();
+
+driver.get("https://demo.guru99.com/test/newtours/");
+String expectedTitle = "Welcome: Mercury Tours";
+
+String actualTitle= driver.getTitle();
+
+if (expectedTitle.contentEquals(actualTitle))
+	
+{
+	System.out.println("Test passed");
+	}else
+		
+		System.out.println("Test Failed");
+
+driver.findElement(By.linkText("REGISTER")).click();
+
+driver.findElement(By.name("firstName")).click();
+
+
+	}
+
+	
+}

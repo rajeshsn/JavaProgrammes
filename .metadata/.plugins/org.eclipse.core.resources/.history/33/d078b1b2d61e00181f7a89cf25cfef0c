@@ -1,0 +1,38 @@
+public class Constructor_Inheritance {
+	int age;
+	
+	Constructor_Inheritance(int age)
+	{
+		this.age=age;
+	}
+}
+
+class Super2 extends Constructor_Inheritance
+
+{
+	
+	String name;
+	Super2(int age, String name)
+	{
+		super (age);
+		this.name=name;
+	}
+	
+	public void get_data()
+	{
+		System.out.println("Age is:"+age+ "Name is"+name);
+	}
+	
+	public static void main(String[] args)
+	{
+		Super2 s = new Super2(11,"Rajesh");
+		
+		s.get_data();
+		
+		
+	}
+}
+	
+
+
+

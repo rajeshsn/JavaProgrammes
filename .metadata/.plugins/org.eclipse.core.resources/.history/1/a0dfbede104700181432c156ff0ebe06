@@ -1,0 +1,37 @@
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class BookingSearch {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+System.setProperty("webdriver.chrome.driver", "C:\\Users\\Rajesh\\Desktop\\Assignment\\chromedriver_win32\\chromedriver.exe");
+		
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.makemytrip.com/");
+		driver.manage().window().maximize();
+		
+		Alert alert = driver.switchTo().alert();
+		alert.dismiss();
+		
+		
+		Select option =new Select( driver.findElement(By.cssSelector("input[id='hp-widget__sfrom']")));
+		
+  option.selectByVisibleText("Pune,India");
+		
+	Select option2 =new Select( driver.findElement(By.cssSelector("input[id='hp-widget__sTo']")));
+	
+	  option.selectByVisibleText("New Delhi,India");
+		
+		
+		Thread.sleep(2000);
+		
+		driver.quit();
+
+	}
+
+}

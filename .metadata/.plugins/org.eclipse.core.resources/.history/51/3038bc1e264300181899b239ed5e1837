@@ -1,0 +1,37 @@
+package AutomationSelenium;
+
+import java.io.IOException;
+
+public class RegistrationUsingXpath {
+
+	public static void main(String[] args) throws InterruptedException, IOException {
+		// TODO Auto-generated method stub
+
+		CommonUtility.launchBrowser();
+		
+		CommonUtility.clickOnElement("//*[@id='menu-item-374']/a");
+		
+		CommonUtility.inputValue("//*[@id='name_3_firstname']", "Rajesh Singh");
+		
+		CommonUtility.inputValue("//*[@id='name_3_lastname']", "Negi");
+		
+		CommonUtility.clickOnElement("//*[@id='pie_register']/li[2]/div/div/input[1]");
+		
+		CommonUtility.clickOnElement("//*[@id='pie_register']/li[3]/div/div[1]/input[3]");
+		
+		CommonUtility.selectDropDown("//*[@id='dropdown_7']", "India");
+		
+		CommonUtility.selectDropDown("//*[@id='mm_date_8']", "8");
+		//*[@id="dd_date_8"]
+	
+		CommonUtility.selectDropDown("//*[@id='dd_date_8']", "12");
+		
+		CommonUtility.selectDropDown("//*[@id='dd_date_8']", "12");
+		
+		//*[@id='yy_date_8']
+		
+		CommonUtility.selectDropDown("//*[@id='yy_date_8']", "1988");
+
+	}
+
+}

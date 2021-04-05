@@ -1,0 +1,32 @@
+package TestFramework;
+
+import org.openqa.selenium.WebDriver;
+
+public class RegistrationPage extends WrapperMethod {
+	
+	
+	static WebDriver driver;
+	
+	public boolean isFirstNameDisplayed(){
+		
+		return checkElementExists(driver, "name_3_firstname");
+		
+		
+	}
+	public boolean isLastNameDisplayed(){
+		
+		return checkElementExists(driver, "name_3_lastname");
+		
+		
+	}
+
+	public void enterDataInFirstName(){
+		
+		enterDataInTextField(driver, "name_3_firstname", "Rajesh");
+	}
+	
+public void enterDataInLastName(){
+		
+		enterDataInTextField(driver, "name_3_lastname", "Negi");
+	}
+}

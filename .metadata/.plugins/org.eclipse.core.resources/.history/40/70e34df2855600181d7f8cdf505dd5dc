@@ -1,0 +1,20 @@
+package TestFramework;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LaunchBrowser {
+	
+	public static void launchBrowser() throws InterruptedException
+	{
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Rajesh\\Desktop\\Assignment\\chromedriver_win32\\chromedriver.exe");
+		
+		 WebDriver driver=new ChromeDriver();
+		driver.get("http://demo.automationtesting.in/Register.html");
+		driver.manage().window().maximize();
+		
+		Thread.sleep(2000);;
+		
+	}
+
+}

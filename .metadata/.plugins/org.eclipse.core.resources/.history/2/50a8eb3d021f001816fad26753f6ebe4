@@ -1,0 +1,22 @@
+
+public class LoopTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int i;
+		int j;
+		
+		for (i=0;i<=10;i++)
+			
+		{
+			for(j=10;j>0;j--)
+				
+				i++;
+		}
+		
+		System.out.println("*");
+
+	}
+
+}

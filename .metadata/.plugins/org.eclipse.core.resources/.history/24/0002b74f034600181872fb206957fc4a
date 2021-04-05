@@ -1,0 +1,23 @@
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class HandleAlert {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+System.setProperty("webdriver.gecko.driver", "C:\\Users\\Rajesh\\Desktop\\Assignment\\geckodriver-v0.20.1-win32\\geckodriver.exes");
+		
+		WebDriver driver=new ChromeDriver();
+		driver.get("http://toolsqa.com/registration/");
+		driver.manage().window().maximize();
+ driver.findElement(By.xpath("//button[@oneclick='pushAlert()']")).click();
+ driver.findElement(By.xpath(""))
+ 
+ Alert alert = driver.switchTo().alert();
+ 
+ alert.accept();
+	}
+
+}

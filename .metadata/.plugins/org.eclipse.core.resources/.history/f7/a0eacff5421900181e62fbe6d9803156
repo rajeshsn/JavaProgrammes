@@ -1,0 +1,14 @@
+
+public class Addition {
+	
+	public static void main() {
+		
+		i =50;
+		int sum=0;
+		sum = sum +i;
+		
+		while (i>=0)
+			System.out.println("Sum of first 50 number"+sum))
+	}
+		
+	}

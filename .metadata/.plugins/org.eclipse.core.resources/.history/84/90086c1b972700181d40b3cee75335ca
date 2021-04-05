@@ -1,0 +1,36 @@
+class Facto{
+	
+	int num;
+	
+	int fact;
+	int i=1;
+	
+	
+	Facto(int num,int fact){
+		
+		this.num=num;
+		
+		this.fact=fact;
+	}
+	
+	void Test(){
+ while(i<=num){
+	 
+	 fact=fact *i;
+	 i++;
+		}
+ System.out.println("Factorial of input number is :" +fact);
+	}
+}
+public class Factorial {
+	
+	public static void main (String[] args){
+		
+		Facto f = new Facto(5);
+		
+		f.Test();
+	}
+	
+	
+
+}

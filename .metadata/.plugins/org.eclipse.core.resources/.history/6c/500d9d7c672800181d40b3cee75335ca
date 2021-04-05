@@ -1,0 +1,74 @@
+	
+class Details{
+	
+	String name;
+	int emp_id;
+	int sal;
+	int base_sal;
+	
+	int hra;
+	int da;
+	
+	Details(String name,int base_sal){
+		
+		this.name=name;
+		this.base_sal=base_sal;
+		
+	}
+	
+	void setDetails(){
+		
+		int emp_id=148881;
+		int sal=70000;
+		
+	}
+	
+	void showDetails(){
+		System.out.println("Employee Dewtails are :"+name+" " +emp_id+" "+sal);
+		
+		
+	}
+	
+	void calGrossSal(){
+	
+		int gross_sal;
+		
+		gross_sal=base_sal+da+hra;
+		
+		System.out.println(""+gross_sal);
+		
+		
+	}
+	void setData(int da){
+		
+		da=5000;
+		
+	}	
+	
+	void setHra(int hra){
+		
+		hra=10000;
+		
+		
+		
+	}
+
+
+}
+
+	
+	
+public class Employee {
+
+	public static void main(String[] args) {
+		
+		// TODO Auto-generated method stub
+		
+		Details d= new Details("Rajesh",500000);
+		d.setDetails();
+		d.showDetails();
+		d.calGrossSal();
+
+	}
+
+}

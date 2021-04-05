@@ -1,0 +1,11 @@
+
+public class WhileLoop {
+
+public static void main() {
+	int =i; 
+	while (i<=10)
+	{
+		System.out.println("Hello");
+	}
+}
+}

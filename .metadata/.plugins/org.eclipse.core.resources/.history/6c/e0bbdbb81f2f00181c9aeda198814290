@@ -1,0 +1,62 @@
+class Percentage{
+	int math;
+	int eng;
+	int history;
+	int science;
+	int art;
+	int physics;
+	Percentage(int a,int b,int c,int d, int e, int f){
+		
+		this.math=a;
+		this.history=c;
+		this.eng=b;
+		this.science=d;
+		this.art=e;
+		this.physics=f;
+		
+	}
+	void calPer(){
+		float percent;
+		
+		float totalscore=600;
+		
+		float obtainedscore;
+		
+		obtainedscore =math+history+eng+science+art+physics;
+		
+		percent=((obtainedscore*100)/totalscore);
+		
+		System.out.println("Percent of student :" +percent);
+		
+		
+	}
+}
+
+class Seventh extends Percentage{
+	
+	Seventh(int a,int b, int c, int d, int e, int f){
+	
+	super(a,b,c,d,e,f);
+	}
+	
+}
+
+class Eighth extends Percentage{
+	
+}
+
+class Nineth extends Percentage{
+	
+}
+
+class Tenth extends Percentage{
+	
+}
+public class BestFivePerApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

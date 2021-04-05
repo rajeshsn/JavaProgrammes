@@ -1,0 +1,31 @@
+
+public class StaticCube {
+	
+	static int num=5;
+	 static int cube;
+	
+	static void Test()
+	{
+		
+	cube =num*num*num;
+	
+	}
+	
+	void display()
+	{
+		System.out.println("Cube of number is "+cube);
+	}
+	
+	public static void main(String args[])
+	
+	{
+		
+		StaticCube s1=new StaticCube();
+		StaticCube.Test();
+		s1.display();
+		
+		
+	}
+	
+
+}

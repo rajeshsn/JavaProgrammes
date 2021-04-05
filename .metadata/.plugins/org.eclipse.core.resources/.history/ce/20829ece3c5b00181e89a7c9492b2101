@@ -1,0 +1,66 @@
+package TestFramework;
+
+import java.awt.AWTException;
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class TestCases extends RegistrationPage {
+
+	
+	@BeforeMethod
+	
+	public void launchBrowser() throws InterruptedException{
+		
+		LaunchBrowser.launchBrowser();
+		
+		
+	}
+	@Test(priority =1, description ="Enter first NAME")
+	public void tc001(){
+		
+		Assert.assertTrue(isFirstNameDisplayed());
+		
+		enterDataInFirstName();
+		
+		
+	}
+	@Test(priority = 0, description ="Enter Last NAME",dependsOnMethods="tc001")
+	public void tc002(){
+		
+		Assert.assertTrue(isLastNameDisplayed());
+		
+		enterDataInLastName();
+		
+		
+	}
+	/*
+	@Test
+	public void tc003() throws IOException, AWTException, InterruptedException{
+		Assert.assertTrue(textDisplayed());
+		SubmitRegistration();
+		
+		
+	}*/
+	
+	@AfterMethod
+	public void checkStatus(ITestResult result) throws IOException{
+		
+		if (ITestResult.FAILURE==result.getStatus()){
+			
+			File srcPath = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			
+		FileUtils.copyFile(srcPath, new File("./Screenshot/screen.png"));
+			
+		}
+	}
+	
+}

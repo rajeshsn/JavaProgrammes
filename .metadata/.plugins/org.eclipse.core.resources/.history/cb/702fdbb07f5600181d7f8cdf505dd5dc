@@ -1,0 +1,11 @@
+package TestFramework;
+
+public class Annotation {
+	
+	public void afterTest()
+	{
+		System.out.println("After Test CAse");
+	}
+	}
+
+

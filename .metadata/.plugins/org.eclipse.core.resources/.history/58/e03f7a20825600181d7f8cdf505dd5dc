@@ -1,0 +1,15 @@
+package TestFramework;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class WrapperMethod {
+	
+	public boolean checkElementExists(WebDriver driver , String id)
+	
+	{
+		
+		return driver.findElement(By.id(id)).isDisplayed();
+	}
+
+}

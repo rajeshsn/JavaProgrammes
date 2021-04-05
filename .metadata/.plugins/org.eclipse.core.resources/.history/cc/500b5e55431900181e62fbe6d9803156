@@ -1,0 +1,14 @@
+
+public class AeraCircle {
+	static int radius;
+	float area;
+	
+	public static void main(String[] args) {
+		
+	float area=(float) (3.14*(radius*radius));
+		
+		System.out.println("Area of Circle is : " + area);
+		}
+
+	}
+

@@ -1,0 +1,24 @@
+package TestFramework;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class WrapperMethod {
+	
+	public boolean checkElementExists(WebDriver driver , String id)
+	
+	{
+		
+		return driver.findElement(By.id(id)).isDisplayed();
+	}
+	
+	public void enterDataInTextField(WebDriver driver, String id , String dataToEnter)
+	
+	{
+		driver.findElement(By.id(id)).sendKeys(dataToEnter);
+	}
+		
+	
+
+}
